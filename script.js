@@ -7,7 +7,7 @@ var index;
 function set(def, chosen){
 	document.getElementById("number").innerHTML = def;
 	index = chosen;
-	// document.getElementById("selector").style.display = "none";
+	document.getElementById("selector").style.display = "none";
 }
 
 function add(digit){
@@ -19,6 +19,6 @@ function add(digit){
 		alert("小数点以下" + (len - 2) + "桁まで成功");
 		index = undefined;
 		document.getElementById("number").innerHTML = "";
-		// document.getElementById("selector").style.display = "block";
+		document.getElementById("selector").style.display = "block";
 	}
 }
