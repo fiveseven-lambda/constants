@@ -5,10 +5,11 @@ var consts = [
 
 var index;
 
-function set(def, chosen){
+function set(def, chosen, hashtag){
 	document.getElementById("number").innerHTML = def;
 	index = chosen;
 	document.getElementById("selector").style.display = "none";
+	document.getElementById("result").innerHTML = hashtag;
 }
 
 function add(digit){
@@ -17,9 +18,14 @@ function add(digit){
 	if(index == undefined || digit == consts[index][len]){
 		document.getElementById("number").innerHTML = prev + digit;
 	}else{
-		alert("小数点以下" + (len - 2) + "桁まで成功");
+		result = "小数点以下" + (len - 2) + "桁まで成功";
+		alert(result);
+		tagresult = document.getElementById("result").innerHTML + ' ' + result;
+		document.getElementById("result").innerHTML = tagresult;
 		index = undefined;
 		document.getElementById("number").innerHTML = "";
 		document.getElementById("selector").style.display = "block";
+		$('a').html('<a href="https://twitter.com/share" class="twitter-share-button" data-text="' + tagresult + '\n" data-lang="ja">ツイート</a>')
+		twttr.widgets.load()
 	}
 }
