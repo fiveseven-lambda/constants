@@ -7,8 +7,8 @@
 	</head>
 	<body>
 		<div id="selector">
-			<button onclick="set('1.', 0, '#ルート2チャレンジ')">√2</button>
-			<button onclick="set('1.', 1, '#ルート3チャレンジ')">√3</button>
+			<button onclick="set_sqrt(2)">√2</button>
+			<button onclick="set_sqrt(3)">√3</button>
 		</div>
 		<p id="number"></p>
 		<div>
@@ -29,6 +29,9 @@
 		<div>
 			<button style="visibility: hidden;">0</button>
 			<button onclick="add(0)">0</button>
+		</div>
+		<div>
+			<button onclick="del()">1桁取消</button>
 		</div>
 		<p id="result"></p>
 		<a>
