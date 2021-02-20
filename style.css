@@ -1,3 +1,7 @@
 #number {
+	font-size: 2em;
 	line-break: anywhere;
+}
+button {
+	font-size: 2em;
 }
