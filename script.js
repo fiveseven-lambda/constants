@@ -39,8 +39,10 @@ function next(){
 
 function del(){
 	if(wrong != -1){
+		if(wrong == 0){
+			--len;
+		}
 		wrong = -1;
-		--len;
 		document.getElementById("number").innerHTML = document.getElementById("number").innerHTML.slice(0, -1);
 	}
 }
